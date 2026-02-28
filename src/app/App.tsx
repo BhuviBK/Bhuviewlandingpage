@@ -255,7 +255,7 @@ export default function App() {
                 WebkitBackdropFilter: "blur(28px) saturate(180%) brightness(1.04)",
                 border: `1px solid ${cardBorder}`,
                 borderRadius: "28px",
-                padding: "clamp(2.5rem, 6vw, 3.75rem) clamp(2rem, 6vw, 4rem)",
+                padding: "clamp(3rem, 7vw, 4.5rem) clamp(2rem, 6vw, 4rem) clamp(2.5rem, 6vw, 3.5rem)",
                 textAlign: "center",
                 boxShadow: cardShadow,
                 transition: "box-shadow 0.6s ease, border-color 0.3s ease",
@@ -277,34 +277,19 @@ export default function App() {
                 }}
               />
 
-              {/* ── Accent bar ── */}
-              <motion.div
-                initial={{ scaleY: 0, opacity: 0 }}
-                animate={{ scaleY: 1, opacity: 1 }}
-                transition={{ delay: 0.4, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                style={{
-                  width: "2px",
-                  height: "40px",
-                  background: `linear-gradient(to bottom, ${accentColor}, transparent)`,
-                  margin: "0 auto 2.5rem",
-                  borderRadius: "999px",
-                  transformOrigin: "top",
-                }}
-              />
-
               {/* ── Brand title ── */}
               <motion.h1
                 initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ delay: 0.55, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ delay: 0.35, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
                 style={{
                   color: textColor,
                   fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
-                  fontSize: "clamp(2.6rem, 7vw, 3.6rem)",
+                  fontSize: "clamp(2.8rem, 8vw, 3.8rem)",
                   fontWeight: 300,
-                  letterSpacing: "-0.05em",
+                  letterSpacing: "-0.03em",
                   lineHeight: 1.1,
-                  margin: "0 0 0.55rem",
+                  margin: "0 0 0.6rem",
                   transition: "color 0.3s ease",
                 }}
               >
@@ -315,31 +300,31 @@ export default function App() {
               <motion.p
                 initial={{ opacity: 0, y: 12, filter: "blur(6px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ delay: 0.75, duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ delay: 0.55, duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 style={{
                   color: subColor,
                   fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
-                  fontSize: "clamp(0.65rem, 1.8vw, 0.78rem)",
-                  fontWeight: 500,
-                  letterSpacing: "0.25em",
+                  fontSize: "clamp(0.6rem, 1.6vw, 0.72rem)",
+                  fontWeight: 400,
+                  letterSpacing: "0.3em",
                   textTransform: "uppercase",
-                  margin: "0 0 2.4rem",
+                  margin: "0 0 2.8rem",
                   transition: "color 0.3s ease",
                 }}
               >
-                UI&thinsp;/&thinsp;UX Portfolio
+                UI / UX Portfolio
               </motion.p>
 
               {/* ── Divider line ── */}
               <motion.div
                 initial={{ scaleX: 0, opacity: 0 }}
                 animate={{ scaleX: 1, opacity: 1 }}
-                transition={{ delay: 0.95, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ delay: 0.75, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                 style={{
                   height: "1px",
                   background: lineColor,
-                  margin: "0 auto 2.4rem",
-                  maxWidth: "180px",
+                  margin: "0 auto 2.8rem",
+                  width: "45%",
                   transformOrigin: "center",
                   borderRadius: "1px",
                   transition: "background 0.3s ease",
@@ -350,16 +335,16 @@ export default function App() {
               <motion.p
                 initial={{ opacity: 0, y: 8, filter: "blur(4px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ delay: 1.15, duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ delay: 0.95, duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 style={{
                   color: taglineColor,
                   fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
                   fontSize: "clamp(0.85rem, 2.2vw, 0.97rem)",
                   fontWeight: 300,
                   fontStyle: "italic",
-                  letterSpacing: "0.015em",
+                  letterSpacing: "0.01em",
                   lineHeight: 1.6,
-                  margin: 0,
+                  margin: "0 0 3rem",
                   transition: "color 0.3s ease",
                 }}
               >
@@ -370,8 +355,8 @@ export default function App() {
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.5, duration: 0.6, ease: "backOut" }}
-                style={{ marginTop: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px" }}
+                transition={{ delay: 1.25, duration: 0.6, ease: "backOut" }}
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "9px" }}
               >
                 <motion.div
                   animate={{ scale: [1, 1.4, 1], opacity: [0.6, 1, 0.6] }}
@@ -382,14 +367,15 @@ export default function App() {
                     borderRadius: "50%",
                     background: accentColor,
                     boxShadow: `0 0 8px 2px ${accentColor}`,
+                    flexShrink: 0,
                   }}
                 />
                 <span
                   style={{
                     color: subColor,
                     fontFamily: "'Inter', system-ui, sans-serif",
-                    fontSize: "0.65rem",
-                    letterSpacing: "0.2em",
+                    fontSize: "0.6rem",
+                    letterSpacing: "0.25em",
                     textTransform: "uppercase",
                     fontWeight: 500,
                     transition: "color 0.3s ease",
