@@ -347,9 +347,7 @@ export default function App() {
                   margin: "0 0 3rem",
                   transition: "color 0.3s ease",
                 }}
-              >
-                "Pixels are aligning. Stay tuned."
-              </motion.p>
+              >Hello, Harishma..! ❤❤</motion.p>
 
               {/* ── Pulsing presence dot ── */}
               <motion.div
